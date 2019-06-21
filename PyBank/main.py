@@ -1,8 +1,8 @@
 # Module for reading CSV files
-import os
+
 import csv
 
-with open(filename, 'r') as csvfile:
+with open(file, 'r') as csvfile:
     csvreader = csv.reader(csvfile)
 # CSV reader specifies delimiter and variable that holds contents
 file = "budget_data.csv"
@@ -12,7 +12,7 @@ monthly_changes = []
 date = []
 #Variables
 all_months = 0
-net_profit = 0
+net_profits = 0
 change_profit = 0
 initial_profit = 0
 
@@ -27,7 +27,9 @@ with open(file, newline="") as csvfile:
         date.append(row[0])
 #The net total amount of "Profit/Losses" over the entire period
         profit.append(row([1])
-        total_profit = total_profit + int(row[1])
+        net_profits = net_profits + int(row[1])
+        
+
 #The average of the changes in "Profit/Losses" over the entire period
         final_profit = int(row[1])
         monthly_profit_change = final_profit - initial_profit
